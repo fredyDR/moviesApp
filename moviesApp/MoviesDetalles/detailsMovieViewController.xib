@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="detailsMovieViewController" customModule="moviesApp" customModuleProvider="target">
+            <connections>
+                <outlet property="DescripcionMovie" destination="Z7C-ed-YVL" id="mf1-Fm-zKv"/>
+                <outlet property="imageView" destination="6rv-6O-jDb" id="y21-xi-FNy"/>
+                <outlet property="tituloMovie" destination="XUY-n4-SSu" id="RvH-y8-4SN"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="hPb-uq-YuS">
+                    <rect key="frame" x="10" y="349" width="394" height="513"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Titulo" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XUY-n4-SSu">
+                            <rect key="frame" x="0.0" y="0.0" width="394" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="fbh-Hd-qBF"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z7C-ed-YVL">
+                            <rect key="frame" x="0.0" y="50" width="394" height="463"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6rv-6O-jDb">
+                    <rect key="frame" x="0.0" y="89" width="414" height="250"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="250" id="AQj-kf-hu5"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TWU-l1-Bd9">
+                    <rect key="frame" x="5" y="44" width="90" height="45"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="90" id="ZBp-gr-sjv"/>
+                        <constraint firstAttribute="height" constant="45" id="nr0-Zh-jHI"/>
+                    </constraints>
+                    <color key="tintColor" red="0.0" green="0.46666666670000001" blue="0.92549019610000005" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="Películas" image="chevron.backward" catalog="system">
+                        <color key="titleColor" red="0.0" green="0.46666666670000001" blue="0.92549019610000005" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="dismissView" destination="-1" eventType="touchUpInside" id="AAh-Yz-58c"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="6rv-6O-jDb" secondAttribute="trailing" id="8ds-mE-bVh"/>
+                <constraint firstItem="6rv-6O-jDb" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="BYx-AA-b5g"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="hPb-uq-YuS" secondAttribute="bottom" id="Ldj-t7-YeW"/>
+                <constraint firstItem="hPb-uq-YuS" firstAttribute="top" secondItem="6rv-6O-jDb" secondAttribute="bottom" constant="10" id="PA0-tT-Ar8"/>
+                <constraint firstItem="6rv-6O-jDb" firstAttribute="top" secondItem="TWU-l1-Bd9" secondAttribute="bottom" id="Ubt-lm-uYe"/>
+                <constraint firstItem="TWU-l1-Bd9" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="hLL-Oe-wFl"/>
+                <constraint firstItem="hPb-uq-YuS" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="nbZ-Rk-iyL"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="hPb-uq-YuS" secondAttribute="trailing" constant="10" id="tkB-oh-EIR"/>
+                <constraint firstItem="TWU-l1-Bd9" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="5" id="ztD-aV-RKr"/>
+            </constraints>
+            <point key="canvasLocation" x="-114.49275362318842" y="83.705357142857139"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="chevron.backward" catalog="system" width="96" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
